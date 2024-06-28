@@ -4,7 +4,7 @@
 
 
 /**
- * copyright 2022 @codewithsadee
+ * copyrigt 2022 @codewithsadee
  */
 
 
@@ -861,7 +861,7 @@ main {
 
 .skill-progress-bg {
   background: var(--jet);
-  width: 100%;
+  width:500%;
   height: 8px;
   border-radius: 10px;
 }
@@ -871,6 +871,10 @@ main {
   height: 100%;
   border-radius: inherit;
 }
+
+
+
+
 
 
 
