@@ -43,3 +43,13 @@ navigationLinks.forEach(link => {
     window.scrollTo(0, 0);
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const skills = document.querySelectorAll(".skills-item");
+
+  skills.forEach(skill => {
+      const value = skill.querySelector("data").value;
+      const bar = skill.querySelector(".skill-progress-fill");
+      bar.style.width = value + "%";
+  });
+});
