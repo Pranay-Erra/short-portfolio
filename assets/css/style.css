@@ -1892,3 +1892,48 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 
+/* Add this CSS to your existing styles */
+
+@keyframes fillAnimation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--progress-width);
+  }
+}
+
+.skill-progress-fill {
+  height: 100%;
+  background-color: #ffaf1d;
+  animation: fillAnimation 2s forwards;
+}
+
+.skill-progress-fill {
+  width: var(--progress-width);
+  height: 100%;
+  background-color: #ffaf1d;
+  animation: fillAnimation 2s forwards;
+}
+
+
+.download-resume {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.download-resume-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.download-resume-btn:hover {
+  background-color: #555;
+}
