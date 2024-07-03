@@ -53,3 +53,40 @@ document.addEventListener("DOMContentLoaded", function() {
       bar.style.width = value + "%";
   });
 });
+
+
+//Contact form-emailJS
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.form');
+    const submitButton = document.querySelector('.form-btn');
+
+    form.addEventListener('input', () => {
+      // Enable the submit button if all required fields are filled
+      const allFilled = [...form.querySelectorAll('[required]')].every(input => input.value.trim() !== '');
+      submitButton.disabled = !allFilled;
+    });
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      submitButton.disabled = true;
+
+      const formData = {
+        fullname: form.fullname.value,
+        email: form.email.value,
+        message: form.message.value
+      };
+
+      emailjs.send('service_act3854', 'template_f6xelnu', formData)
+        .then(() => {
+          alert('Message sent successfully!');
+          form.reset();
+          submitButton.disabled = true;
+        })
+        .catch(err => {
+          console.error('Failed to send message', err);
+          alert('Failed to send message. Please try again later.');
+          submitButton.disabled = false;
+        });
+    });
+  });
+
